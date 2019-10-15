@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta content="text/html; charset=UTF8">
+    <title>图片显示</title>
+</head>
+<body>
+    {% for item in imgs %}
+    {% url item.img_url.url as the_url %}
+    <!-- /static/staticFiles/img/%E4%B8%AD%E6%96%87_FaSL3PI.PNG -->
+        <!-- <img src="{{item.img_url.url}}"/><br/> -->
+        <img src="{{item.img_url.url}}"/><br/>
+        <hr/>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+    <meta content="text/html; charset=UTF8">
+    <title>currentShow</title>
+    <script type='text/javascript' src="{% static 'js/jquery-3.3.1.js' %}"></script>
+</head>
+<body>
+    <!-- <h1>{{capid}}</h1> -->
+    <hr/>
+    <!-- <input type="text" id="clock" /> -->
+<script type="text/javascript">
+var myInterval=self.setInterval("clock()",100);
+function clock()
+{
+var d=new Date();
+var t=d.toLocaleTimeString();
+myInterval=window.clearInterval(myInterval)
+
+
+$.ajax({
+    url:'../currentcap',
+    type:'GET',
+    dataType:'json',
+    data:{d:t},
+    success:function(response,xml){
+        //请求成功后执行的代码
+        myInterval=self.setInterval("clock()",100);
+        console.log(response.imagepath);
+        $('#capShow').attr('src', response.imagepath);
+    },
+    error:function(status){
+        //失败后执行的代码
+        myInterval=self.setInterval("clock()",100);
+    }
+});
+
+//document.getElementById("capShow").value=t;
+}
+
+</script>
+
+<!-- <button onclick="int=window.clearInterval(int)">停止</button> -->
+
+    <img id="capShow" style="width:1580px;height:820px;" src="{{img.img_url.url}}"/>
+    <hr/>
+</body>
+</html>

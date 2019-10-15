@@ -1,0 +1,78 @@
+#:kivy 1.10.0
+#:import gmtime time.gmtime
+#:import strftime time.strftime
+
+<ScreenManager>: 
+    HomeScreen 
+    AnotherScreen 
+<HomeScreen>: 
+    name: 'home' 
+    RelativeLayout:
+        size_hint: None, None
+        size: self.size
+        pos: self.pos
+        Widget:
+            pos: self.parent.pos
+            size: 50, 50
+            canvas:
+                Color:
+                    rgba: 0, 1, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+<Home2Screen>: 
+    name: 'home2' 
+    GridLayout:
+        rows:5
+        cols:2
+        Label:
+            font_size: 36
+            halign: 'center'
+            valign: 'middle'
+            color: (1,1,1,1)
+            text:"sport"
+        CheckBox: 
+            id:c1
+            text: 'Go to another screen' 
+            on_release: root.on_checkbox_active('c1')
+        Label:
+            font_size: 36
+            halign: 'center'
+            valign: 'middle'
+            color: (1,1,1,1)
+            text:"sport"
+        CheckBox: 
+            id:c1
+            text: 'Go to another screen' 
+            on_release: root.on_checkbox_active('c1')
+        Label:
+            font_size: 36
+            halign: 'center'
+            valign: 'middle'
+            color: (1,1,1,1)
+            text:"sport"
+        CheckBox: 
+            id:c1
+            text: 'Go to another screen' 
+            on_release: root.on_checkbox_active('c1')
+        Label:
+            font_size: 36
+            halign: 'center'
+            valign: 'middle'
+            color: (1,1,1,1)
+            text:"phone/email"
+        TextInput:
+            id:in
+            font_size: 36
+            halign: 'center'
+            valign: 'middle'
+        Button:
+            cols:2
+            text:"Ok"
+        Button:
+            text:"Close"
+<AnotherScreen>: 
+    name: 'another' 
+    Button: 
+        text: "Go back home" 
+        on_release: root.manager.current = 'home'

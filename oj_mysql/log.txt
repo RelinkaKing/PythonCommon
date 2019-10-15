@@ -1,0 +1,13 @@
+JianJiaTiJi_L  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+JianJiaTiJi_R  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+JingJiaJi_L  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+JingJiaJi_R  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouBanJiJi_L  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouBanJiJi_R  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouJiaJi_L  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouJiaJi_R  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouZuiChangJi_L  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+TouZuiChangJi_R  neck  bonelittlemap.xml  Back  Brainlittlemap.xml
+JingZhi_L  neck  Brainlittlemap.xml  head  shenjinglittlemap.xml
+JingZhi_R  neck  Brainlittlemap.xml  head  shenjinglittlemap.xml
+Ge  Abdomen  shenjinglittlemap.xml  chest  simpleheartlittlemap.xml
